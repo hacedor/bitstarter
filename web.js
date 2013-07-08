@@ -14,7 +14,6 @@ fs.exists(fileName, function(exists) {
         var buffer = new Buffer(stats.size);
         fs.read(fd, buffer, 0, buffer.length, null, function(error, bytesRead, buffer) {
           var data = buffer.toString("utf8", 0, buffer.length);
-//          console.log(data);
           response.send(data);
           fs.close(fd);
         });
@@ -23,7 +22,6 @@ fs.exists(fileName, function(exists) {
   }
 });
 
-//  response.send('Hello World2!');
 });
 
 //app.get('/', function(request, response) {
